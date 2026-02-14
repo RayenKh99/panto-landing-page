@@ -28,7 +28,7 @@ export default function Hero() {
                 className="w-full px-6 py-4 pr-14 rounded-full text-gray-700 placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white-500 bg-white/25 border border-gray-300 text-white"
               />
               <button
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-accent hover:bg-accent-hover rounded-full flex items-center justify-center transition-colors"
                 aria-label="Search"
               >
                 <Search
@@ -41,6 +41,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Background gradient overlay at bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-background pointer-events-none" />
     </section>
   );
 }

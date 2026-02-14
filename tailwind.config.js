@@ -15,6 +15,13 @@ module.exports = {
         ],
         heading: ["var(--font-gilroy-bold)", "system-ui", "sans-serif"],
       },
+      colors: {
+        primary: "#1E1E1E",
+        secondary: "#0D1B39",
+        accent: "#E58411",
+        "accent-hover": "#d17810",
+        background: "#F5F5F5",
+      },
     },
   },
   plugins: [
