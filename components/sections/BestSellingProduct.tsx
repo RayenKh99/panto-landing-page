@@ -70,12 +70,12 @@ export default function BestSellingProduct() {
           </h2>
 
           {/* Category Tabs */}
-          <div className="inline-flex items-center bg-[#EEEEEE] rounded-2xl p-1">
+          <div className="inline-flex items-center bg-[#EEEEEE] rounded-full p-1">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-xl font-medium transition-colors ${
+                className={`px-6 py-2 rounded-full font-medium transition-colors ${
                   activeCategory === category
                     ? "bg-white text-primary"
                     : "text-primary/60 hover:text-primary"
@@ -93,7 +93,7 @@ export default function BestSellingProduct() {
           {/* Left Arrow */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow z-10"
+            className="absolute left-[-20px] top-[50%] -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow z-10"
             aria-label="Previous products"
           >
             <ChevronLeft size={20} strokeWidth={2} className="text-primary" />
@@ -104,20 +104,22 @@ export default function BestSellingProduct() {
             {visibleProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-2xl pb-6 px-2 hover:shadow-lg transition-shadow"
               >
                 {/* Product Image */}
-                <div className="relative w-full aspect-square mb-6 bg-gray-50 rounded-xl overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain p-4"
-                  />
+                <div className="relative w-full aspect-square mb-6">
+                  <div className="relative w-full h-full bg-gray-50 rounded-t-xl overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-contain p-2"
+                    />
+                  </div>
                 </div>
 
                 {/* Product Info */}
-                <div className="space-y-3">
+                <div className="space-y-3 px-4">
                   {/* Category Label */}
                   <span className="text-xs font-medium uppercase tracking-wide" style={{ color: "#8D8D8D" }}>
                     Chair
@@ -159,7 +161,7 @@ export default function BestSellingProduct() {
           {/* Right Arrow */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow z-10"
+            className="absolute right-[-20px] top-[50%] -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow z-10"
             aria-label="Next products"
           >
             <ChevronRight size={20} strokeWidth={2} className="text-primary" />
