@@ -70,12 +70,12 @@ export default function BestSellingProduct() {
           </h2>
 
           {/* Category Tabs */}
-          <div className="inline-flex items-center bg-[#EEEEEE] rounded-xl p-1">
+          <div className="inline-flex items-center bg-[#EEEEEE] rounded-2xl p-1">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${
+                className={`px-6 py-2 rounded-xl font-medium transition-colors ${
                   activeCategory === category
                     ? "bg-white text-primary"
                     : "text-primary/60 hover:text-primary"

@@ -2,7 +2,7 @@ import { ArrowRight } from "akar-icons";
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-background py-20 lg:py-32">
+    <section className="bg-white py-20 lg:py-32">
       <div className="w-full px-8 lg:px-16 xl:px-20 2xl:px-24">
         {/* Content Section */}
         <div className="grid lg:grid-cols-4 gap-12 lg:gap-16">
