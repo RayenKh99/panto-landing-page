@@ -193,12 +193,12 @@ export default function BestSellingProduct() {
         );
 
   return (
-    <section className="bg-background py-20 lg:py-32">
-      <div className="w-full px-8 lg:px-16 xl:px-20 2xl:px-24">
+    <section className="bg-background py-16 lg:py-32">
+      <div className="w-full px-5 sm:px-8 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <FadeIn>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 sm:mb-8">
               Best Selling Product
             </h2>
 
@@ -208,7 +208,7 @@ export default function BestSellingProduct() {
                 <button
                   key={category}
                   onClick={() => handleCategoryChange(category)}
-                  className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                  className={`px-3 sm:px-6 py-2 rounded-full text-sm sm:text-base font-medium transition-colors ${
                     activeCategory === category
                       ? "bg-white text-primary"
                       : "text-primary/60 hover:text-primary"
@@ -218,7 +218,7 @@ export default function BestSellingProduct() {
                 </button>
               ))}
             </div>
-            <div className="flex justify-center mb-12" />
+            <div className="flex justify-center mb-8 sm:mb-12" />
           </div>
         </FadeIn>
 
@@ -227,7 +227,7 @@ export default function BestSellingProduct() {
           {/* Left Arrow */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-[-20px] top-[50%] -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow z-10"
+            className="hidden sm:flex absolute left-[-20px] top-[50%] -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md items-center justify-center hover:shadow-lg transition-shadow z-10"
             aria-label="Previous products"
           >
             <ChevronLeft size={20} strokeWidth={2} className="text-primary" />
@@ -236,7 +236,7 @@ export default function BestSellingProduct() {
           {/* Product Grid */}
           <FadeIn key={activeCategory}>
             <div
-              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ${
+              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 ${
                 scrollDirection === "left"
                   ? "product-scroll-left"
                   : scrollDirection === "right"
@@ -308,7 +308,25 @@ export default function BestSellingProduct() {
           {/* Right Arrow */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-[-20px] top-[50%] -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition-shadow z-10"
+            className="hidden sm:flex absolute right-[-20px] top-[50%] -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md items-center justify-center hover:shadow-lg transition-shadow z-10"
+            aria-label="Next products"
+          >
+            <ChevronRight size={20} strokeWidth={2} className="text-primary" />
+          </button>
+        </div>
+
+        {/* Mobile Navigation Arrows */}
+        <div className="flex sm:hidden justify-center gap-4 mt-6">
+          <button
+            onClick={() => scroll("left")}
+            className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center"
+            aria-label="Previous products"
+          >
+            <ChevronLeft size={20} strokeWidth={2} className="text-primary" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center"
             aria-label="Next products"
           >
             <ChevronRight size={20} strokeWidth={2} className="text-primary" />
@@ -317,7 +335,7 @@ export default function BestSellingProduct() {
 
         {/* View All Link */}
         <FadeIn delay={0.3}>
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <a
               href="#products"
               className="inline-flex items-center gap-2 text-accent hover:text-accent-hover text-base font-semibold transition-colors group"

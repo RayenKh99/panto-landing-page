@@ -4,22 +4,22 @@ import FadeIn from "@/components/ui/FadeIn";
 export default function Footer() {
   return (
     <footer className="bg-background">
-      <div className="w-full px-8 lg:px-16 xl:px-20 2xl:px-24">
+      <div className="w-full px-5 sm:px-8 lg:px-16 xl:px-20 2xl:px-24">
         {/* Main Footer Content */}
         <FadeIn>
-          <div className="py-16 lg:py-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          <div className="py-12 sm:py-16 lg:py-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16">
               {/* Brand Column */}
-              <div className="space-y-6">
+              <div className="space-y-6 text-center sm:text-left">
                 <h3 className="text-2xl font-bold text-primary">Panto</h3>
-                <p className="text-secondary text-sm leading-relaxed max-w-xs">
+                <p className="text-secondary text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
                   The advantage of hiring a workspace with us is that givees you
                   comfortable service and all-around facilities.
                 </p>
               </div>
 
               {/* Services Column */}
-              <div className="space-y-6">
+              <div className="space-y-6 text-center sm:text-left">
                 <h4 className="text-lg font-bold text-accent">Services</h4>
                 <ul className="space-y-3">
                   <li>
@@ -50,7 +50,7 @@ export default function Footer() {
               </div>
 
               {/* Furniture Column */}
-              <div className="space-y-6">
+              <div className="space-y-6 text-center sm:text-left">
                 <h4 className="text-lg font-bold text-accent">Furniture</h4>
                 <ul className="space-y-3">
                   <li>
@@ -81,7 +81,7 @@ export default function Footer() {
               </div>
 
               {/* Follow Us Column */}
-              <div className="space-y-6">
+              <div className="space-y-6 text-center sm:text-left">
                 <h4 className="text-lg font-bold text-accent">Follow Us</h4>
                 <ul className="space-y-3">
                   <li>
@@ -89,7 +89,7 @@ export default function Footer() {
                       href="https://facebook.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-secondary text-sm hover:text-primary transition-colors group"
+                      className="inline-flex sm:flex items-center gap-3 text-secondary text-sm hover:text-primary transition-colors group"
                     >
                       <FacebookFill size={20} className="text-primary" />
                       Facebook
@@ -100,7 +100,7 @@ export default function Footer() {
                       href="https://twitter.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-secondary text-sm hover:text-primary transition-colors group"
+                      className="inline-flex sm:flex items-center gap-3 text-secondary text-sm hover:text-primary transition-colors group"
                     >
                       <TwitterFill size={20} className="text-primary" />
                       Twitter
@@ -111,7 +111,7 @@ export default function Footer() {
                       href="https://instagram.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-secondary text-sm hover:text-primary transition-colors group"
+                      className="inline-flex sm:flex items-center gap-3 text-secondary text-sm hover:text-primary transition-colors group"
                     >
                       <InstagramFill size={20} className="text-primary" />
                       Instagram

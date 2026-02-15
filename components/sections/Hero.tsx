@@ -8,19 +8,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="relative md:pt-48 pt-28 px-4 text-center md:w-1/2 mx-auto space-y-8">
-        <div className="w-full px-8 lg:px-16 xl:px-20 2xl:px-24 pt-8">
-          <div className="max-w-2xl text-center">
+      <div className="relative pt-28 md:pt-48 px-5 sm:px-8 text-center w-full md:w-2/3 lg:w-1/2 mx-auto space-y-8">
+        <div className="w-full lg:px-16 xl:px-20 2xl:px-24 pt-8">
+          <div className="max-w-2xl text-center mx-auto">
             {/* Main Headline */}
             <FadeIn delay={0.2}>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
                 Make Your Interior More Minimalistic & Modern
               </h1>
             </FadeIn>
 
             {/* Subtitle */}
             <FadeIn delay={0.4}>
-              <p className="text-lg lg:text-xl text-white/80 mb-10 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-10 leading-relaxed">
                 Turn your room with panto into a lot more minimalist and modern with ease and speed
               </p>
             </FadeIn>
@@ -31,7 +31,7 @@ export default function Hero() {
                 <input
                   type="text"
                   placeholder="Search furniture"
-                  className="w-full px-6 py-4 pr-14 rounded-full text-gray-700 placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white-500 bg-white/25 border border-gray-300 text-white"
+                  className="w-full px-6 py-3 sm:py-4 pr-14 rounded-full text-gray-700 placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white-500 bg-white/25 border border-gray-300 text-white"
                 />
                 <button
                   className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-accent hover:bg-accent-hover rounded-full flex items-center justify-center transition-colors"
