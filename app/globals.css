@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes product-scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-12px);
+	}
+}
+
+@keyframes product-scroll-right {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(12px);
+	}
+}
+
+.product-scroll-left {
+	animation: product-scroll-left 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-scroll-right {
+	animation: product-scroll-right 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes testimonials-scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-12px);
+	}
+}
+
+@keyframes testimonials-scroll-right {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(12px);
+	}
+}
+
+.testimonials-scroll-left {
+	animation: testimonials-scroll-left 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.testimonials-scroll-right {
+	animation: testimonials-scroll-right 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
